@@ -125,7 +125,7 @@
 
         tog_ASTARTE {
             bindings = <&tog 1>;
-            key-positions = <42 30 40>;
+            key-positions = <30 40>;
         };
 
         Clipboard {
@@ -135,7 +135,7 @@
 
         tog_Game {
             bindings = <&tog 2>;
-            key-positions = <42 31 40>;
+            key-positions = <31 40>;
         };
     };
 
