@@ -61,6 +61,7 @@
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             //スクロール方向を逆転,,,
             <&zip_xy_to_scroll_mapper>;
+            <&scroll_slow>;
     };
 };
 
@@ -295,6 +296,12 @@
             bindings = <&msc>, <&msc>;
 
             tap-ms = <20>;
+        };
+
+        // スクロール速度を例として 1/4 (分子 1, 分母 4) に設定
+        scroll_slow: scroll_slow {
+            compatible = "zmk,behavior-input-processor";
+            input-processors = <&zip_scroll_scaler 1 2>;
         };
     };
 
