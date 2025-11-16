@@ -55,8 +55,9 @@
 
     // スクロール速度を 1/4 に設定 (1 4 の部分を調整可能)
     scroll_slow: scroll_slow {
-        compatible = "zmk,behavior-input-processor";
-        input-processors = <&zip_scroll_scaler 1 4>;
+    compatible = "zmk,input-processor-chain";
+        #input-processor-cells = <0>;
+        processors = <&zip_scroll_scaler 1 4>;
     };  
 };
 
